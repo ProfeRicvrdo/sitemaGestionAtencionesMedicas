@@ -11,33 +11,44 @@ import cl.duoc.doctorMS.repository.EspecialidadRepository;
 
 @Configuration
 public class DataLoader {
+
     @Bean
-    CommandLineRunner initData(DoctorRepository doctorRepository, EspecialidadRepository especialidadRepository) {
+    CommandLineRunner initData(DoctorRepository docRepo, EspecialidadRepository espRepo){
+
         return args -> {
-            if (especialidadRepository.count() == 0) {
-                
-                Especialidad cardiologia = especialidadRepository.save(new Especialidad(null, "Cardiología"));
-                Especialidad neurologia = especialidadRepository.save(new Especialidad(null, "Neurología"));
-                Especialidad pediatria = especialidadRepository.save(new Especialidad(null, "Pediatría"));
-                
-                especialidadRepository.save(cardiologia);
-                especialidadRepository.save(neurologia);
-                especialidadRepository.save(pediatria);
 
-                Doctor doctor1 = new Doctor(null, "Dr. Juan Pérez", "12345678-9", cardiologia);
-                Doctor doctor2 = new Doctor(null, "Dra. María González", "98765432-1", neurologia);
-                Doctor doctor3 = new Doctor(null, "Dr. Carlos López", "11223344-5", pediatria);
+            if (docRepo.count() > 0){
                 
-                doctorRepository.save(doctor1);
-                doctorRepository.save(doctor2);
-                doctorRepository.save(doctor3);
+                System.out.println("No se insertaron datos porque la bd no esta vacia");
 
-                System.out.println("Datos de especialidades y doctores cargados exitosamente.");
             }else{
-                System.out.println("Datos de especialidades y doctores ya existen. No se cargarán datos de ejemplo.");
+
+                Especialidad espe1 = new Especialidad(null, "Pediatria");
+                Especialidad espe2 = new Especialidad(null, "Cardiologia");
+                Especialidad espe3 = new Especialidad(null, "Medicina general");
+
+                Doctor doc1 = new Doctor(null, "Juan Perez", "123456-7", espe1);
+                Doctor doc2 = new Doctor(null, "Ana Munoz", "78456-4", espe3);
+            
+                espRepo.save(espe1);
+                espRepo.save(espe2);
+                espRepo.save(espe3);
+
+                docRepo.save(doc1);
+                docRepo.save(doc2);
+
+                System.out.println("Datos cargados con exito");
+
             }
         };
+
+
     }
+
+
+
+
+
 
 
 }
