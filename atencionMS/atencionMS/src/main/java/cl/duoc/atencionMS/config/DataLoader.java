@@ -16,16 +16,11 @@ public class DataLoader {
     CommandLineRunner initData(TipoAtencionRepository tipoAtencionRepository, AtencionRepository atencionRepository ) {
         return args -> {
             
-            TipoAtencion tipoAtencion1 = new TipoAtencion(null,"Consulta General");
-            TipoAtencion tipoAtencion2 = new TipoAtencion(null,s"Control de Enfermedad Crónica");
-
-
-            Atencion atencion1 = new Atencion(null, "Consulta General", "Consulta médica general para evaluación de síntomas.", null);
+            
 
 
 
 
-            System.out.println("Datos de atenciones cargados exitosamente.");
         };
     }
 
