@@ -1,0 +1,23 @@
+package cl_duoc.aureka_server;
+
+import java.util.Collections;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+
+@SpringBootApplication
+@EnableEurekaServer
+public class AurekaServerApplication {
+
+    public static void main(String[] args) {
+        SpringApplication app = new SpringApplication(AurekaServerApplication.class);
+        
+        // 🔥 Forzamos las propiedades por código para ignorar el archivo de configuración externo
+        app.setDefaultProperties(Collections.singletonMap("server.port", "8761"));
+        System.setProperty("eureka.client.register-with-eureka", "false");
+        System.setProperty("eureka.client.fetch-registry-with-eureka", "false");
+        
+        app.run(args);
+    }
+}

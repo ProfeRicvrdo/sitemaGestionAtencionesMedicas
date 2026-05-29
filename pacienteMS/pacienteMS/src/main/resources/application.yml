@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: pacienteMS # 👈 Este es el nombre exacto que debes usar en el @FeignClient de atenciones
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/pacientes_db
+    username: root
+    password: "" # Si no tiene contraseña, se deja vacío entre comillas
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# 🔥 CONEXIÓN A EUREKA
+# Agregamos esto para que se registre automáticamente en tu panel
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
