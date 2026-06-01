@@ -9,9 +9,12 @@ import org.springframework.web.bind.annotation.*;
 import cl.duoc.pacienteMS.dto.PacienteDTO;
 import cl.duoc.pacienteMS.model.Paciente;
 import cl.duoc.pacienteMS.service.PacienteService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/api/v1/pacientes")
+@Tag(name = "Pacientes", description = "Operaciones sobre pacientes")
 public class PacienteController {
 
     @Autowired
@@ -31,6 +34,7 @@ public class PacienteController {
 
     //GET: buscar por ID
     @GetMapping("/{id}")
+    @Operation(summary = "Buscar paciente por ID")
     public ResponseEntity<Paciente> buscarPorId(@PathVariable Integer id) {
         try {
             Paciente paciente = service.buscarPorId(id);
