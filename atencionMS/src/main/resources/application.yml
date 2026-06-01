@@ -1,0 +1,22 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: atencionMS
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/atenciones_db
+    username: root
+    password: ""
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# 🔥 CONEXIÓN A EUREKA
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
