@@ -19,44 +19,48 @@ public class DataLoader {
 
         return args -> {
         
-            // Aquí puedes cargar datos de ejemplo para pacientes si lo deseas
+            if (pacienteRepository.count() > 0){
+                System.out.println("No se cargaron los datos de prueba, ya hay datos en la bd");
 
-            Paciente paciente1 = new Paciente(null, "12345678-9", "Juan","Pérez", 33, null, null);
-            Paciente paciente2 = new Paciente(null, "98765432-1", "María","González", 28, null, null);
-            Paciente paciente3 = new Paciente(null, "11111111-1", "Carlos","Sánchez", 45, null, null);
+            }else{
+                // Aquí puedes cargar datos de ejemplo para pacientes si lo deseas
+                
+                Paciente paciente1 = new Paciente(null, "12345678-9", "Juan","Pérez", 33, null, null);
+                Paciente paciente2 = new Paciente(null, "98765432-1", "María","González", 28, null, null);
+                Paciente paciente3 = new Paciente(null, "11111111-1", "Carlos","Sánchez", 45, null, null);
+                
+                
+                Contacto contacto1 = new Contacto(null, "987654321", "correo@correo.cl", paciente1);
+                Contacto contacto2 = new Contacto(null, "123456789", "correo2@correo.cl", paciente2);
+                Contacto contacto3 = new Contacto(null, "555555555", "correo3@correo.cl", paciente3);
+                
+                Direccion direccion1 = new Direccion(null, "Calle Falsa", "123","Santiago", "Santiago", paciente1);
+                Direccion direccion2 = new Direccion(null, "Avenida Siempre Viva", "456","Valparaíso", "Valparaíso", paciente2);
+                Direccion direccion3 = new Direccion(null, "Calle Principal", "789","Concepción", "Concepción", paciente3);
+                
+                paciente1.setDireccion(direccion1);
+                paciente2.setDireccion(direccion2);
+                paciente3.setDireccion(direccion3);
+                
+                paciente1.setContacto(contacto1);
+                paciente2.setContacto(contacto2);
+                paciente3.setContacto(contacto3);   
+                
+                pacienteRepository.save(paciente1);
+                pacienteRepository.save(paciente2);
+                pacienteRepository.save(paciente3);
+                
+                contactoRepository.save(contacto1);
+                contactoRepository.save(contacto2);
+                contactoRepository.save(contacto3);
+                
+                direccionRepository.save(direccion1);
+                direccionRepository.save(direccion2);
+                direccionRepository.save(direccion3);
+                
+                System.out.println("Datos de pacientes cargados exitosamente.");
 
-
-            Contacto contacto1 = new Contacto(null, "987654321", "correo@correo.cl", paciente1);
-            Contacto contacto2 = new Contacto(null, "123456789", "correo2@correo.cl", paciente2);
-            Contacto contacto3 = new Contacto(null, "555555555", "correo3@correo.cl", paciente3);
-
-            Direccion direccion1 = new Direccion(null, "Calle Falsa", "123","Santiago", "Santiago", paciente1);
-            Direccion direccion2 = new Direccion(null, "Avenida Siempre Viva", "456","Valparaíso", "Valparaíso", paciente2);
-            Direccion direccion3 = new Direccion(null, "Calle Principal", "789","Concepción", "Concepción", paciente3);
-
-            paciente1.setDireccion(direccion1);
-            paciente2.setDireccion(direccion2);
-            paciente3.setDireccion(direccion3);
-
-            paciente1.setContacto(contacto1);
-            paciente2.setContacto(contacto2);
-            paciente3.setContacto(contacto3);   
-
-            pacienteRepository.save(paciente1);
-            pacienteRepository.save(paciente2);
-            pacienteRepository.save(paciente3);
-
-            contactoRepository.save(contacto1);
-            contactoRepository.save(contacto2);
-            contactoRepository.save(contacto3);
-            
-            direccionRepository.save(direccion1);
-            direccionRepository.save(direccion2);
-            direccionRepository.save(direccion3);
-
-            System.out.println("Datos de pacientes cargados exitosamente.");
-
-            
+            }
         };
     }
 
