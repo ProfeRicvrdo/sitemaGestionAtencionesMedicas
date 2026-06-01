@@ -29,6 +29,9 @@ public class Atencion {
     @Column(name = "doctor_id", nullable = false)
     private Integer doctorId;
 
+
+    private int costo;
+
     //  Relación interna (SÍ permitido)
     @ManyToOne
     @JoinColumn(name = "tipo_atencion_id", nullable = false)

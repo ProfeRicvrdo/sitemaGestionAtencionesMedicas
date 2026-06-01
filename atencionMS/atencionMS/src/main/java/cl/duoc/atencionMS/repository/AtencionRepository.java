@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import cl.duoc.atencionMS.model.Atencion;
+import java.util.Date;
+
 
 @Repository
 public interface AtencionRepository extends JpaRepository<Atencion, Integer> {
@@ -18,5 +20,10 @@ public interface AtencionRepository extends JpaRepository<Atencion, Integer> {
 
     //  Buscar por tipo de atención (relación interna JPA)
     List<Atencion> findByTipoAtencionId(Integer tipoAtencionId);
+
+
+    List<Atencion> findByFechaAtencion(Date fechaAtencion);
+
+
 
 }
