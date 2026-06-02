@@ -4,16 +4,18 @@ server:
 spring:
   application:
     name: pacienteMS
-  
+
   datasource:
     url: jdbc:mysql://localhost:3306/pacientes_db
     username: root
     password: 
-  
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
 
 springdoc:
   api-docs:
@@ -21,3 +23,8 @@ springdoc:
     version: openapi_3_0
   swagger-ui:
     enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

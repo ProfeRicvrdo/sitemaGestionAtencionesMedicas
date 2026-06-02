@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.3</version>
+        <version>3.4.3</version> -- tuve que cambiar la version de spring boot a 3.4.3 para que sea compatible con spring cloud 2024.0.0
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
