@@ -30,7 +30,6 @@ public class Paciente {
     private String apellido;
 
     @Column(nullable = false)
-    @Schema(description = "Edad del paciente", example = "30")
     private Integer edad;
 
     // Relación con Dirección
