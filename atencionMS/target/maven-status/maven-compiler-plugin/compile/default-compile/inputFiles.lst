@@ -1,0 +1,13 @@
+/Users/ricardoyanez/GestionCompleta/sitemaGestionAtencionesMedicas/atencionMS/src/main/java/cl/duoc/atencionMS/dto/AtencionDetalleDTO.java
+/Users/ricardoyanez/GestionCompleta/sitemaGestionAtencionesMedicas/atencionMS/src/main/java/cl/duoc/atencionMS/repository/AtencionRepository.java
+/Users/ricardoyanez/GestionCompleta/sitemaGestionAtencionesMedicas/atencionMS/src/main/java/cl/duoc/atencionMS/controller/AtencionController.java
+/Users/ricardoyanez/GestionCompleta/sitemaGestionAtencionesMedicas/atencionMS/src/main/java/cl/duoc/atencionMS/model/TipoAtencion.java
+/Users/ricardoyanez/GestionCompleta/sitemaGestionAtencionesMedicas/atencionMS/src/main/java/cl/duoc/atencionMS/client/DoctorClient.java
+/Users/ricardoyanez/GestionCompleta/sitemaGestionAtencionesMedicas/atencionMS/src/main/java/cl/duoc/atencionMS/client/PacienteClient.java
+/Users/ricardoyanez/GestionCompleta/sitemaGestionAtencionesMedicas/atencionMS/src/main/java/cl/duoc/atencionMS/dto/DoctorDTO.java
+/Users/ricardoyanez/GestionCompleta/sitemaGestionAtencionesMedicas/atencionMS/src/main/java/cl/duoc/atencionMS/dto/PacienteDTO.java
+/Users/ricardoyanez/GestionCompleta/sitemaGestionAtencionesMedicas/atencionMS/src/main/java/cl/duoc/atencionMS/AtencionMsApplication.java
+/Users/ricardoyanez/GestionCompleta/sitemaGestionAtencionesMedicas/atencionMS/src/main/java/cl/duoc/atencionMS/repository/TipoAtencionRepository.java
+/Users/ricardoyanez/GestionCompleta/sitemaGestionAtencionesMedicas/atencionMS/src/main/java/cl/duoc/atencionMS/service/AtencionService.java
+/Users/ricardoyanez/GestionCompleta/sitemaGestionAtencionesMedicas/atencionMS/src/main/java/cl/duoc/atencionMS/model/Atencion.java
+/Users/ricardoyanez/GestionCompleta/sitemaGestionAtencionesMedicas/atencionMS/src/main/java/cl/duoc/atencionMS/dto/TipoAtencionDTO.java

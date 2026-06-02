@@ -3,7 +3,9 @@ package cl.duoc.atencionMS.model;
 import java.util.Date;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
 @Data
 @NoArgsConstructor
@@ -22,6 +24,7 @@ public class Atencion {
     @Column(nullable = false)
     private String diagnostico;
 
+    
     //  Microservicios → SOLO IDs
     @Column(name = "paciente_id", nullable = false)
     private Integer pacienteId;

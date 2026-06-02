@@ -15,6 +15,8 @@ import cl.duoc.atencionMS.repository.AtencionRepository;
 @Service
 public class AtencionService {
 
+
+
     @Autowired
     private AtencionRepository repository;
 
@@ -47,6 +49,7 @@ public class AtencionService {
             throw new RuntimeException("Paciente no existe");
         }
 
+        
         // 🔹 Validar doctor
         DoctorDTO doctor = doctorClient.obtenerDoctor(atencion.getDoctorId());
 

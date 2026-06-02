@@ -1,7 +1,9 @@
 package cl.duoc.atencionMS.model;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 @Data
 @NoArgsConstructor
@@ -16,4 +18,5 @@ public class TipoAtencion {
 
     @Column(nullable = false)
     private String nombre;
+    
 }

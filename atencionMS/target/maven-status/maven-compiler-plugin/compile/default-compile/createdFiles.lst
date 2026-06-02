@@ -1,0 +1,13 @@
+cl/duoc/atencionMS/dto/AtencionDetalleDTO.class
+cl/duoc/atencionMS/dto/TipoAtencionDTO.class
+cl/duoc/atencionMS/dto/DoctorDTO.class
+cl/duoc/atencionMS/model/TipoAtencion.class
+cl/duoc/atencionMS/dto/PacienteDTO.class
+cl/duoc/atencionMS/service/AtencionService.class
+cl/duoc/atencionMS/client/PacienteClient.class
+cl/duoc/atencionMS/controller/AtencionController.class
+cl/duoc/atencionMS/repository/AtencionRepository.class
+cl/duoc/atencionMS/repository/TipoAtencionRepository.class
+cl/duoc/atencionMS/AtencionMsApplication.class
+cl/duoc/atencionMS/model/Atencion.class
+cl/duoc/atencionMS/client/DoctorClient.class
