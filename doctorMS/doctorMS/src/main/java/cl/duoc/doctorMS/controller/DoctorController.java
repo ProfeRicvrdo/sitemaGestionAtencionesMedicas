@@ -52,16 +52,16 @@ public class DoctorController {
         }
     }
 
- @GetMapping("/dto/{id}")
-public ResponseEntity<DoctorDTO> obtenerDoctorDTO(@PathVariable Integer id) {
-    Doctor doctor = service.buscarPorId(id);
-    DoctorDTO dto = new DoctorDTO(
+    @GetMapping("/dto/{id}")
+    public ResponseEntity<DoctorDTO> obtenerDoctorDTO(@PathVariable Integer id) {
+        Doctor doctor = service.buscarPorId(id);
+        DoctorDTO dto = new DoctorDTO(
             doctor.getId(),
             doctor.getNombre(),
             doctor.getEspecialidad().getNombre() // extraemos solo el nombre
-    );
-    return ResponseEntity.ok(dto);
-}
+        );
+        return ResponseEntity.ok(dto);
+    }
 
 
 
