@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import cl.duoc.doctorMS.dto.DoctorDTO;
 import cl.duoc.doctorMS.model.Doctor;
 import cl.duoc.doctorMS.service.DoctorService;
+
 
 @RestController
 @RequestMapping("/api/v1/doctores")
@@ -52,16 +52,6 @@ public class DoctorController {
         }
     }
 
- @GetMapping("/dto/{id}")
-public ResponseEntity<DoctorDTO> obtenerDoctorDTO(@PathVariable Integer id) {
-    Doctor doctor = service.buscarPorId(id);
-    DoctorDTO dto = new DoctorDTO(
-            doctor.getId(),
-            doctor.getNombre(),
-            doctor.getEspecialidad().getNombre() // extraemos solo el nombre
-    );
-    return ResponseEntity.ok(dto);
-}
 
 
 
